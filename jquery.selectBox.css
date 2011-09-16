@@ -45,15 +45,22 @@
 	overflow: hidden;
 }
 
-.selectBox-dropdown .selectBox-arrow {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 23px;
-	height: 100%;
-	background: url(jquery.selectBox-arrow.gif) 50% center no-repeat;
-	border-left: solid 1px #BBB;
-}
+.selectBox-dropdown .selectBox-arrow:after {
+  content: "\0020";
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-top: 6px solid #777;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 3px;
+  position: absolute;
+  top: 0.7em;
+  right: 0.5em
+}   
 
 
 /* Dropdown menu */
